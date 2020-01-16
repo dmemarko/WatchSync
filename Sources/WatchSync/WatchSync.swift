@@ -17,7 +17,7 @@ public protocol ErrorLoggingDelegateWatchSync: AnyObject {
   func logError(_ error: Error)
 }
 
-protocol WatchSyncDelegate {
+public protocol WatchSyncDelegate {
     func sessionReachabilityDidChange(to reachibility: Bool)
 }
 
