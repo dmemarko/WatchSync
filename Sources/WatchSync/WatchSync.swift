@@ -17,11 +17,17 @@ public protocol ErrorLoggingDelegateWatchSync: AnyObject {
   func logError(_ error: Error)
 }
 
+protocol WatchSyncDelegate {
+    func sessionReachabilityDidChange(to reachibility: Bool)
+}
+
 /// Singleton to manage phone and watch communication
 open class WatchSync: NSObject {
     public static let shared = WatchSync()
 
     public var errorLoggingDelegate: ErrorLoggingDelegateWatchSync?
+    
+    public var delegate: WatchSyncDelegate?
 
     public let session: WCSession? = WCSession.isSupported() ? WCSession.default : nil
 
@@ -405,7 +411,9 @@ extension WatchSync: WCSessionDelegate {
     #endif
 
     // MARK: Reachability
-    public func sessionReachabilityDidChange(_ session: WCSession) {}
+    public func sessionReachabilityDidChange(_ session: WCSession) {
+        delegate?.sessionReachabilityDidChange(to: session.isReachable)
+    }
 
     // MARK: Realtime messaging (must be reachable)
     public func session(_ session: WCSession, didReceiveMessage message: [String: Any]) {
