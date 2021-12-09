@@ -37,7 +37,7 @@ open class WatchSync: NSObject {
     ///
     /// I would prefer to use a Set here but not sure not sure how
     /// to implement the `Hashable` protocol on metatype `Type`
-    private var registeredMessageTypes: [SyncableMessage.Type] = []
+    private var registeredMessageTypes = [SyncableMessage.Type]()
 
     /// Weak references to subscriptions for `SyncableMessage` messages
     private var syncableMessageSubscriptions = NSPointerArray.weakObjects()
@@ -52,10 +52,10 @@ open class WatchSync: NSObject {
     private var fileTransferSubscriptions = NSPointerArray.weakObjects()
 
     /// Store callbacks until we receive a response from didFinish userInfoTransfer
-    private var userInfoCallbacks: [WCSessionUserInfoTransfer: SendResultCallback?] = [:]
+    private var userInfoCallbacks = [WCSessionUserInfoTransfer: SendResultCallback?]()
 
     /// Store callbacks until we receive a response from didFinish fileTransfer
-    private var fileTransferCallbacks: [WCSessionFileTransfer: FileTransferCallback?] = [:]
+    private var fileTransferCallbacks = [WCSessionFileTransfer: FileTransferCallback?]()
 
     /// Called when launching the app for the first time to setup Watch Connectivity
     ///
