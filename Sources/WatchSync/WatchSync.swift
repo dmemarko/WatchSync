@@ -52,10 +52,10 @@ open class WatchSync: NSObject {
     private var fileTransferSubscriptions = NSPointerArray.weakObjects()
 
     /// Store callbacks until we receive a response from didFinish userInfoTransfer
-    private var userInfoCallbacks = [WCSessionUserInfoTransfer: SendResultCallback?]()
+    @Atomic private var userInfoCallbacks = [WCSessionUserInfoTransfer: SendResultCallback?]()
 
     /// Store callbacks until we receive a response from didFinish fileTransfer
-    private var fileTransferCallbacks = [WCSessionFileTransfer: FileTransferCallback?]()
+    @Atomic private var fileTransferCallbacks = [WCSessionFileTransfer: FileTransferCallback?]()
 
     /// Called when launching the app for the first time to setup Watch Connectivity
     ///

@@ -36,6 +36,8 @@
 		CDE7025C205B78C800C40127 /* SubscriptionToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE7025A205B77C200C40127 /* SubscriptionToken.swift */; };
 		CDE7025D205B78CA00C40127 /* SyncableMessageSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE70256205B777800C40127 /* SyncableMessageSubscription.swift */; };
 		CDE7025E205B78CD00C40127 /* MessageSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE70258205B77A700C40127 /* MessageSubscription.swift */; };
+		E5597F00276216A2000BE337 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5597EFF276216A2000BE337 /* Atomic.swift */; };
+		E5597F01276216A2000BE337 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5597EFF276216A2000BE337 /* Atomic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,7 @@
 		CDE70258205B77A700C40127 /* MessageSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSubscription.swift; sourceTree = "<group>"; };
 		CDE7025A205B77C200C40127 /* SubscriptionToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionToken.swift; sourceTree = "<group>"; };
 		DB70F1DFE94C09EF51764707 /* Pods_WatchSync_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchSync_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5597EFF276216A2000BE337 /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		EDBB92FDF3CB707A0886D614 /* Pods-WatchSync iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchSync iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchSync iOS/Pods-WatchSync iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				CDC2968D205B679C00305A82 /* Codable+JSON.swift */,
+				E5597EFF276216A2000BE337 /* Atomic.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,6 +446,7 @@
 				741E19C62068DA8300D8C82B /* FileTransferResult.swift in Sources */,
 				CDC2968E205B679C00305A82 /* Codable+JSON.swift in Sources */,
 				CDC29688205B679000305A82 /* WatchSync.swift in Sources */,
+				E5597F00276216A2000BE337 /* Atomic.swift in Sources */,
 				CDC2968B205B679600305A82 /* SyncableMessage.swift in Sources */,
 				CDE7025B205B77C200C40127 /* SubscriptionToken.swift in Sources */,
 				742E93B5206379B300419EBC /* UpdateContextResult.swift in Sources */,
@@ -468,6 +473,7 @@
 				741E19C72068DA9C00D8C82B /* FileTransferResult.swift in Sources */,
 				CDC29689205B679000305A82 /* WatchSync.swift in Sources */,
 				742E93B72063845900419EBC /* ApplicationContextSubscription.swift in Sources */,
+				E5597F01276216A2000BE337 /* Atomic.swift in Sources */,
 				CDE7025C205B78C800C40127 /* SubscriptionToken.swift in Sources */,
 				742E93B62063843700419EBC /* UpdateContextResult.swift in Sources */,
 				CDC2968C205B679600305A82 /* SyncableMessage.swift in Sources */,
